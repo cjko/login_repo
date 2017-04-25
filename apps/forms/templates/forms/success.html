@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login and Registration</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container" style="text-align: center">
+	<div class="row justify-content-center">
+		<div class="col-sm-6 align-self-center well">
+			<h1>Welcome, {{ first_name }}!</h1>
+			<h4 style="color: green">
+			{% if messages %}
+				{% for message in messages %}
+					{{message}}
+				{% endfor %}
+			{% endif %}
+			</h4>
+			<a href="/logout"><button class="btn btn-primary">Logout</button></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
